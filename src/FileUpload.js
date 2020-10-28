@@ -129,9 +129,7 @@ class FileUpload {
    * Perform the file upload.
    */
   upload () {
-    if (this.results) {
-      return Promise.resolve(this.results)
-    } else if (this.uploadPromise) {
+    if (this.uploadPromise) {
       return this.uploadPromise
     }
     this.uploadPromise = new Promise((resolve, reject) => {
